@@ -1,3 +1,4 @@
 {
-  "enable_command_hello_world": true
+  "enable_command_hello_world": true,
+  "enable_command_nc_program_rename": true
 }

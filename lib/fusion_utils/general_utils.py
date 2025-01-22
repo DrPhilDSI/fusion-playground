@@ -22,8 +22,8 @@ import json
 app = adsk.core.Application.get()
 ui = app.userInterface
 
-ADDIN_NAME = os.path.basename(os.path.dirname(__file__))
-COMPANY_NAME = 'Phil Squared'
+ADDIN_NAME = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+COMPANY_NAME = 'Mr.Dr.Phil'
 
 # Workspace IDs
 CAM_WORKSPACE_ID = 'CAMEnvironment'
