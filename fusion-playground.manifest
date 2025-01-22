@@ -1,8 +1,8 @@
 {
 	"autodeskProduct":	"Fusion360",
 	"type":	"addin",
-	"id":	"550e8400-e29b-41d4-a716-446655440000",
-	"author":	"Phil B and Phil M",
+	"id":	"550e8400-e29b-41d4-a716-446655440001",
+	"author":	"Phil B",
 	"description":	{
 		"":	""
 	},
