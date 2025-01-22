@@ -10,6 +10,10 @@ config = futil.load_config()
 if config["enable_command_hello_world"]:
     from . import command_hello_world
     commands.append(command_hello_world)
+    
+if config["enable_command_nc_program_rename"]:
+    from . import command_nc_program_rename
+    commands.append(command_nc_program_rename)
 
 def create_ui_panels():
     ui = futil.Fusion().getUI()
@@ -25,11 +29,18 @@ def create_ui_panels():
 def delete_ui_panels():
     ui = futil.Fusion().getUI()
     designWS = ui.workspaces.itemById(futil.DESIGN_WORKSPACE_ID)
+    tabs = designWS.toolbarTabs.itemById(futil.DESIGN_TEMPLATE_TAB_ID)
+    if tabs != None:
+        tabs.deleteMe()
     panel = designWS.toolbarPanels.itemById(futil.DESIGN_TEMPLATE_PANEL_ID)
     if panel != None:
         panel.deleteMe()
 
+
     manufWS = ui.workspaces.itemById(futil.CAM_WORKSPACE_ID)
+    tabs = manufWS.toolbarTabs.itemById(futil.CAM_TEMPLATE_TAB_ID)
+    if tabs != None:
+        tabs.deleteMe()
     panel = manufWS.toolbarPanels.itemById(futil.CAM_TEMPLATE_PANEL_ID)
     if panel != None:
         panel.deleteMe()
